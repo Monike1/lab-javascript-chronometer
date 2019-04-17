@@ -8,31 +8,6 @@ var hecDec      = document.getElementById('hecDec');
 var hecUni      = document.getElementById('hecUni');
 var splits      = document.getElementById('splits');
 
-// function printTime() {
-//   printHectoseconds();
-//   printSeconds();
-//   printMinutes();
-// }
-
-// function printHectoseconds() {
-//   hecDec.innerHTML = chronometer.hectoseconds.toString().split("")[0];
-//   hecUni.innerHTML = chronometer.hectoseconds.toString().split("")[1];
-// }
-
-// function printSeconds() {
-//   secDec.innerHTML = chronometer.seconds.toString().split("")[0];
-//   secUni.innerHTML = chronometer.seconds.toString().split("")[1];
-// }
-
-// function printMinutes() {
-//   minDec.innerHTML = chronometer.minutes.toString().split("")[0];
-//   minUni.innerHTML = chronometer.minutes.toString().split("")[1];
-// }
-
-
-
-
-
 function Chronometer() {
   this.hectoseconds = 0;
   this.seconds = 0;
@@ -49,7 +24,6 @@ function Chronometer() {
           hecDec.innerHTML = this.hectoseconds.toString().split("")[0];
         }
         
-        // hecDec.innerHTML = this.hectoseconds.toString().split("")[0];
         if (this.hectoseconds % 100 === 0) {
           this.hectoseconds = 0;
           this.seconds++;
@@ -60,7 +34,6 @@ function Chronometer() {
             secUni.innerHTML = this.seconds.toString().split("")[1];
             secDec.innerHTML = this.seconds.toString().split("")[0];
           }
-          
           
           if (this.seconds % 60 === 0) {
             this.seconds = 0;
@@ -74,17 +47,10 @@ function Chronometer() {
           }
         };
         
-        
-        
-        
-        // console.log(`${this.twoDigitsNumber(this.minutes)} : ${this.twoDigitsNumber(this.seconds)} : ${this.twoDigitsNumber(this.hectoseconds)}`);
-        // console.log(count);
-        // return count;
       },
     10);
   };
-  // this.getMinutes = function() {};
-  // this.getSeconds = function(){};
+  
 
   this.twoDigitsNumber = function(time) {
     if (time <= 9) {
@@ -96,7 +62,6 @@ function Chronometer() {
   //to show the result (amount of time)
   this.stopClick = function() {
     clearInterval(this.intervalId);
-    // console.log(`Stop click: ${this.twoDigitsNumber(this.minutes)} : ${this.twoDigitsNumber(this.seconds)} : ${this.twoDigitsNumber(this.hectoseconds)}`);
   };
   // to reset chronometer to zero
   this.resetClick = function() {

@@ -1,22 +1,6 @@
 var chronometer = new Chronometer();
 
 
-
-
-
-
-
-
-
-// function printSplit() {
-
-// }
-
-// function clearSplits() {
-
-// }
-
-
 // replace css classes to change the state of the buttons 
 function setStopBtn() {
   btnLeft.classList.replace('start', 'stop');
